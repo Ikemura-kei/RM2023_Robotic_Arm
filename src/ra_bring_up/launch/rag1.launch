@@ -1,0 +1,9 @@
+<launch>
+
+    <!-- base control moveit -->
+    <include file="$(find arm_IK)/launch/arm_ik.launch" />
+    <node name="trajectory_test" pkg="trajectory_test" type="bear_controller"/>
+    <include file="$(find rag1_config)/launch/demo.launch" />
+    <node name="arm_moveit" pkg="arm_moveit" type="armmoveit_node"/>    
+
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+    <!-- fake cmd and joint_state pulisher -->
+    <node name="fake_cmd" pkg="fake_cmd" type="fake_cmd_node"/>
+    <node name="actual_joint_state" pkg="actual_joint_state" type="actual_joint_state_node"/>
+
+    <!-- base control moveit -->
+    <include file="$(find arm_IK)/launch/arm_ik.launch" />
+    <node name="trajectory_test" pkg="trajectory_test" type="bear_controller" output="screen"/>
+    <include file="$(find rag1_config)/launch/demo.launch" />
+    <node name="arm_moveit" pkg="arm_moveit" type="armmoveit_node" output="screen"/>
+    
+
+</launch>
