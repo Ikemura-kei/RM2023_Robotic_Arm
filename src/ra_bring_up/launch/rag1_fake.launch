@@ -1,6 +1,6 @@
 <launch>
     <!-- fake cmd and joint_state pulisher -->
-    <node name="fake_cmd" pkg="fake_cmd" type="fake_cmd_node"/>
+    <node name="fake_cmd" pkg="fake_cmd" type="ac"/>
     <node name="actual_joint_state" pkg="actual_joint_state" type="actual_joint_state_node"/>
 
     <!-- base control moveit -->
